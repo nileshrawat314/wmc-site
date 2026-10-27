@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ | WMC, IIT Bombay</title>
+  <meta name="description" content="Answers about how long hosting takes, Docker, storage limits, security and support at IIT Bombay WMC.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1b3a6b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">WMC</span>
+        <span class="brand__text">
+          <span class="brand__name">Webservices Management Cell</span>
+          <span class="brand__sub">IIT Bombay</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workflow.html">Workflow</a></li>
+          <li><a href="prepare.html">Prepare</a></li>
+          <li><a href="faq.html" aria-current="page">FAQ</a></li>
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="request.html">Start a request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Frequently asked questions</h1>
+        <p>Short answers about timing, formats, security and support. Can't find yours? Write to WMC from the contact page.</p>
+      </div>
+    </section>
+
+    <div class="wrap" style="padding-bottom: var(--space-5); max-width: 52rem; margin-inline: max(1.25rem, calc((100% - var(--page-width)) / 2))">
+        <section class="faq-group">
+          <h2>Getting started</h2>
+          <div class="faq">
+          <details>
+            <summary>How does hosting work from start to finish?</summary>
+            <div><p>You review security yourself, the cybersecurity team scans the site, you fix what it finds and they retest, then you send your approved code to WMC and DNS and SSL go live. The <a href="workflow.html">workflow page</a> covers each stage.</p></div>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <div><p>Around 7 to 10 working days on average. Complex applications, open vulnerabilities and slow approvals all add time.</p></div>
+          </details>
+          <details>
+            <summary>Does WMC build or design the website?</summary>
+            <div><p>No. WMC provides the hosting infrastructure, deployment support and server maintenance. Your department or vendor builds the site and looks after its content.</p></div>
+          </details>
+          <details>
+            <summary>What can be hosted?</summary>
+            <div><p>Static HTML sites, Drupal 10 and 11, WordPress, and Dockerized applications.</p></div>
+          </details>
+          </div>
+        </section>
+        <section class="faq-group">
+          <h2>Formats and limits</h2>
+          <div class="faq">
+          <details>
+            <summary>Is Docker mandatory?</summary>
+            <div><p>Dynamic applications should preferably be submitted as Docker deployments. Static HTML sites are synced from GitLab instead, and CMS dumps are accepted on a best-effort basis. If you cannot use Docker, ask WMC before you start building.</p></div>
+          </details>
+          <details>
+            <summary>Will I get terminal or server access?</summary>
+            <div><p>No. WMC handles deployment and does not provide terminal or backend access.</p></div>
+          </details>
+          <details>
+            <summary>How much storage do I get?</summary>
+            <div><p>5 GB per website, counting files and database together. A larger allocation may be considered case by case.</p></div>
+          </details>
+          <details>
+            <summary>Can I host a site that needs logins from outside the campus network?</summary>
+            <div><p>No. WMC does not host sites or applications that require logging in from external networks to add or update content.</p></div>
+          </details>
+          </div>
+        </section>
+        <section class="faq-group">
+          <h2>Security</h2>
+          <div class="faq">
+          <details>
+            <summary>Who is responsible for security?</summary>
+            <div><p>Your team secures the application. WMC secures the servers and operating systems. Every reported vulnerability has to be resolved before launch approval.</p></div>
+          </details>
+          <details>
+            <summary>Do the checklist items have to be ticked?</summary>
+            <div><p>The items are guidance to help you prepare. The security review and your compliance confirmation are required, and extra observations can still come up.</p></div>
+          </details>
+          <details>
+            <summary>Can new security requirements appear after I submit?</summary>
+            <div><p>Yes. Depending on your architecture and what the scan finds, the cybersecurity team or the Computer Centre may ask for more.</p></div>
+          </details>
+          </div>
+        </section>
+        <section class="faq-group">
+          <h2>Support</h2>
+          <div class="faq">
+          <details>
+            <summary>Something is wrong with hosting. Who do I tell?</summary>
+            <div><p>Report it to WMC through the official support channel. See the <a href="contact.html">contact page</a> for email and phone.</p></div>
+          </details>
+          <details>
+            <summary>Who fixes layout or content problems?</summary>
+            <div><p>Your own department or developers. WMC does not troubleshoot layout, content accuracy or internal workflows.</p></div>
+          </details>
+          <details>
+            <summary>Is there a starting template?</summary>
+            <div><p>Yes. WMC provides an IIT Bombay themed Drupal template to help you get a site started.</p></div>
+          </details>
+          <details>
+            <summary>I want to change something on my live site. Who do I ask?</summary>
+            <div><p>Your own developer or department. WMC hosts the site but does not design, build or update it.</p></div>
+          </details>
+          <details>
+            <summary>How do we update our site after it is live?</summary>
+            <div><p>Your developer or department makes the update. WMC does not edit content and gives no terminal or backend access. Static sites change through the GitLab repository, Dockerized apps through a new version of the image, and Drupal or WordPress sites through the CMS admin login. See <a href="workflow.html#updates">Keeping your site up to date</a>.</p></div>
+          </details>
+          <details>
+            <summary>Can I visit the WMC office?</summary>
+            <div><p>Please email first and wait for a reply. The team is often in the middle of other work, and unannounced visits interrupt it. Put the details of your issue or request in the email.</p></div>
+          </details>
+          </div>
+        </section>
+    </div>
+
+  
+    <nav class="next-step wrap" aria-label="Next step">
+      <a href="contact.html"><span class="next-step__label">Next</span><span class="next-step__title">Still have a question? Contact WMC</span></a>
+    </nav>
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Webservices Management Cell</h2>
+          <p>Website hosting and compliance for departments and centres at <a href="https://www.iitb.ac.in">IIT Bombay</a>.</p>
+          <p>IIT Bombay, Powai, Mumbai</p>
+        </section>
+        <section aria-labelledby="f-contact">
+          <h2 id="f-contact">Contact</h2>
+          <p>wmc [at] iitb [dot] ac [dot] in</p>
+          <p><a href="tel:+912221596769">(022) 2159 6769</a></p>
+          <p>Call during working hours</p>
+        </section>
+        <section aria-labelledby="f-start">
+          <h2 id="f-start">Get started</h2>
+          <ul>
+            <li><a href="request.html">Start a hosting request</a></li>
+            <li><a href="prepare.html#checklists">Open a checklist</a></li>
+            <li><a href="prepare.html#template">Download the template</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2026 Webservices Management Cell &middot; Last updated 15 October 2026</p>
+        <ul>
+          <li><a href="contact.html">Report a problem with this website</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

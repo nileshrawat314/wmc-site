@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start a hosting request | WMC, IIT Bombay</title>
+  <meta name="description" content="Request website hosting at IIT Bombay: department, technical details, contact and security confirmation.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1b3a6b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">WMC</span>
+        <span class="brand__text">
+          <span class="brand__name">Webservices Management Cell</span>
+          <span class="brand__sub">IIT Bombay</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workflow.html">Workflow</a></li>
+          <li><a href="prepare.html">Prepare</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="request.html">Start a request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Start a hosting request</h1>
+        <p>Fill in what you can. Fields marked with * are needed so WMC can deploy your site. Not sure what to write? The <a href="prepare.html#details">requirements page</a> has examples.</p>
+      </div>
+    </section>
+
+    <div class="wrap" style="padding-bottom: var(--space-5); max-width: 48rem; margin-inline: max(1.25rem, calc((100% - var(--page-width)) / 2))">
+      <!-- HTML-only demo: submitting opens request-received.html. Fields have no name attributes on purpose,
+           so typed details are not added to the page address. Add names back if you ever connect a server. -->
+      <form class="form" action="request-received.html" method="get">
+
+        <fieldset>
+          <legend>About the website</legend>
+          <div class="field">
+            <label for="dept">Department or centre</label>
+            <input id="dept" type="text" required autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="purpose">Purpose of the website</label>
+            <textarea id="purpose" required></textarea>
+            <span class="hint">Who is it for and what does it do?</span>
+          </div>
+          <div class="field">
+            <label for="domain">Production domain</label>
+            <input id="domain" type="text" required placeholder="yourdept.iitb.ac.in">
+            <span class="hint">The address you want the live site to use.</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Technical details</legend>
+          <div class="field">
+            <label for="stack">What are you hosting?</label>
+            <select id="stack" required>
+              <option value="">Choose one</option>
+              <option value="static">Static HTML site</option>
+              <option value="node">Node.js or React app</option>
+              <option value="cms">Drupal or WordPress</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stack-detail">Technology stack and versions</label>
+            <input id="stack-detail" type="text" placeholder="Node.js 22, Express 4, EJS">
+          </div>
+          <div class="field">
+            <label for="database">Database type</label>
+            <input id="database" type="text" placeholder="MongoDB 7, or none">
+          </div>
+          <div class="field field--docker">
+            <label for="docker">Docker configuration</label>
+            <textarea id="docker"></textarea>
+            <span class="hint">The port the app uses, how it starts, and the names (not values) of its environment variables.</span>
+          </div>
+          <div class="field">
+            <label for="gitlab">GitLab repository URL</label>
+            <input id="gitlab" type="url">
+          </div>
+          <div class="field">
+            <label for="auth">Authentication method</label>
+            <input id="auth" type="text" placeholder="Public site only, or admin login with JWT">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Point of contact</legend>
+          <div class="field">
+            <label for="coordinator">Web coordinator name</label>
+            <input id="coordinator" type="text" required autocomplete="name">
+          </div>
+          <div class="field field--row">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Security confirmation</legend>
+          <div class="confirm">
+            <input id="reviewed" type="checkbox" required>
+            <label for="reviewed">I have worked through the <a href="prepare.html#checklists">checklist for my stack</a> and confirm that my site complies.</label>
+          </div>
+          <div class="confirm">
+            <input id="forms" type="checkbox">
+            <label for="forms">Every public form on my site has a CAPTCHA, or my site has no public forms.</label>
+          </div>
+          <div class="confirm">
+            <input id="https" type="checkbox">
+            <label for="https">My site works over HTTPS (SSL/TLS).</label>
+          </div>
+          <div class="confirm">
+            <input id="deps" type="checkbox">
+            <label for="deps">My dependencies, CMS core and plugins are up to date.</label>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Send request</button>
+          <a class="btn btn--ghost" href="prepare.html#details">Check requirements first</a>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Webservices Management Cell</h2>
+          <p>Website hosting and compliance for departments and centres at <a href="https://www.iitb.ac.in">IIT Bombay</a>.</p>
+          <p>IIT Bombay, Powai, Mumbai</p>
+        </section>
+        <section aria-labelledby="f-contact">
+          <h2 id="f-contact">Contact</h2>
+          <p>wmc [at] iitb [dot] ac [dot] in</p>
+          <p><a href="tel:+912221596769">(022) 2159 6769</a></p>
+          <p>Call during working hours</p>
+        </section>
+        <section aria-labelledby="f-start">
+          <h2 id="f-start">Get started</h2>
+          <ul>
+            <li><a href="request.html">Start a hosting request</a></li>
+            <li><a href="prepare.html#checklists">Open a checklist</a></li>
+            <li><a href="prepare.html#template">Download the template</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2026 Webservices Management Cell &middot; Last updated 15 October 2026</p>
+        <ul>
+          <li><a href="contact.html">Report a problem with this website</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prepare your submission | WMC, IIT Bombay</title>
+  <meta name="description" content="Security checklists, the details to send, and a submission template for hosting a website at IIT Bombay.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1b3a6b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">WMC</span>
+        <span class="brand__text">
+          <span class="brand__name">Webservices Management Cell</span>
+          <span class="brand__sub">IIT Bombay</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workflow.html">Workflow</a></li>
+          <li><a href="prepare.html" aria-current="page">Prepare</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="request.html">Start a request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Prepare your submission</h1>
+        <p>Work through three parts in order: check your own site against the security checklist, gather the details WMC needs, then fill in the template.</p>
+      </div>
+    </section>
+
+    <div class="wrap workflow">
+
+      <nav class="stage-index" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#checklists">Security checklists</a></li>
+          <li><a href="#details">Details to send</a></li>
+          <li><a href="#template">Submission template</a></li>
+        </ol>
+      </nav>
+
+      <div class="stages">
+
+        <section class="plain-section" id="checklists" aria-labelledby="checklists-title" style="padding-top: 0; border-top: 0">
+          <h2 id="checklists-title">Security checklists</h2>
+          <p>Work through the list for your stack, then the list for every site. The items are guidance to help you pass the scan the first time. The Computer Centre may raise extra points once it sees how your application is built.</p>
+          <nav class="jump" aria-label="Checklists">
+            <a href="#static">Static HTML</a>
+            <a href="#node">Node.js or React</a>
+            <a href="#cms">Drupal or WordPress</a>
+            <a href="#all">Every site</a>
+          </nav>
+          <p style="margin-top: var(--space-2)">Tick only what applies to your site, and leave the rest blank. Ticks are not saved when you leave the page, so print it (Ctrl+P) if you want a copy.</p>
+          <section class="checkset" id="static" aria-labelledby="static-title">
+          <div class="checkset__head">
+            <h3 id="static-title">Static HTML site</h3>
+            <p>For plain HTML, CSS and JavaScript sites synced from GitLab.</p>
+          </div>
+          <ul class="checks">
+          <li><label><input type="checkbox"><span><strong>Source code is in the official GitLab repository</strong><small>WMC syncs static sites from there and keeps track of versions.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>No passwords, tokens or API keys in the code</strong><small>Anything in HTML, CSS or JavaScript can be read by every visitor.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Pages work on phones, tablets and desktops</strong><small>Check the layout at small, medium and wide screen sizes.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Security headers are set</strong><small>Add the recommended HTTP security headers wherever they apply.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Unused JavaScript and CSS libraries are removed</strong><small>Less code to ship means less to keep patched.</small></span></label></li>
+          </ul>
+          <p class="checks__status" data-total="5"></p>
+          <p class="checks__done">All done. Send your compliance confirmation with the request.</p>
+        </section>
+<section class="checkset" id="node" aria-labelledby="node-title">
+          <div class="checkset__head">
+            <h3 id="node-title">Node.js or React app</h3>
+            <p>For dynamic applications delivered as a Docker image.</p>
+          </div>
+          <ul class="checks">
+          <li><label><input type="checkbox"><span><strong>A Dockerfile and run instructions are included</strong><small>WMC deploys your image, so it has to start without manual steps.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Secrets are kept out of the repository</strong><small>Pass them in as environment variables instead of committing them.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>The production build runs cleanly</strong><small>Build and start the app the way it will run in production.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>npm audit has been reviewed</strong><small>Fix serious findings and be ready to explain any you leave.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Input is validated on the server</strong><small>Never rely on browser-side checks alone.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Helmet and CORS are configured</strong><small>Set security headers and allow only the origins you need.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Stack traces are hidden in production errors</strong><small>Visitors should see a plain error page, not your internals.</small></span></label></li>
+          </ul>
+          <p class="checks__status" data-total="7"></p>
+          <p class="checks__done">All done. Send your compliance confirmation with the request.</p>
+        </section>
+<section class="checkset" id="cms" aria-labelledby="cms-title">
+          <div class="checkset__head">
+            <h3 id="cms-title">Drupal or WordPress</h3>
+            <p>For CMS-based sites, including those sent as a CMS dump.</p>
+          </div>
+          <ul class="checks">
+          <li><label><input type="checkbox"><span><strong>CMS core is on the latest stable version</strong><small>Drupal 10 or 11, or the current WordPress release.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Unused plugins and modules are removed</strong><small>Every installed extension is something that can be attacked.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Third-party plugins and modules are updated</strong><small>Check each one against its newest stable release.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>The default admin username is disabled</strong><small>Use a different administrator account.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Directory listing is turned off</strong><small>Visitors should not be able to browse folders on the server.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>File permissions are set properly</strong><small>Uploads and configuration files should not be writable by everyone.</small></span></label></li>
+          </ul>
+          <p class="checks__status" data-total="6"></p>
+          <p class="checks__done">All done. Send your compliance confirmation with the request.</p>
+        </section>
+<section class="checkset" id="all" aria-labelledby="all-title">
+          <div class="checkset__head">
+            <h3 id="all-title">Every site</h3>
+            <p>These apply whatever you are hosting.</p>
+          </div>
+          <ul class="checks">
+          <li><label><input type="checkbox"><span><strong>Email addresses are written as name [at] domain [dot] in</strong><small>Stops automated harvesting for spam and phishing.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Public forms are protected with CAPTCHA</strong><small>This applies to every form anyone can reach.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Dependencies and plugins are up to date</strong><small>Re-check right before you submit.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>The site works over HTTPS</strong><small>Avoid hard-coded http:// links to your own pages.</small></span></label></li>
+          <li><label><input type="checkbox"><span><strong>Your compliance confirmation is ready to send</strong><small>It goes with the request.</small></span></label></li>
+          </ul>
+          <p class="checks__status" data-total="5"></p>
+          <p class="checks__done">All done. Send your compliance confirmation with the request.</p>
+        </section>
+        </section>
+
+        <section class="plain-section" id="details" aria-labelledby="details-title">
+          <h2 id="details-title">Details to send to WMC</h2>
+          <p>Sending everything in one go saves a round of questions. There are three groups: the website, the technical setup and the security basics.</p>
+          <div style="margin-top: var(--space-3)">
+            <div class="table-block">
+          <div class="table-scroll">
+            <table class="req-table">
+              <caption>About the website</caption>
+              <thead><tr><th scope="col">Item</th><th scope="col">What to provide</th><th scope="col">Example</th></tr></thead>
+              <tbody>
+            <tr><th scope="row">Department or centre</th><td>The full official name of the owning department, academic unit or centre.</td><td>Department of Chemistry</td></tr>
+            <tr><th scope="row">Purpose of the website</th><td>One or two sentences on who the site is for and what it does.</td><td>Public site with admissions information and faculty profiles</td></tr>
+            <tr><th scope="row">URL details</th><td>Any specific addresses or paths the site needs, including old addresses that should redirect.</td><td>/admissions should open the admissions page</td></tr>
+            <tr><th scope="row">Production domain</th><td>The domain you want the live site to use. WMC allocates domains and subdomains under Institute guidelines.</td><td>yourdept.iitb.ac.in</td></tr>
+            <tr><th scope="row">Point of contact</th><td>Your web coordinator: name, email and phone number.</td><td>Name, department email, extension</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+<div class="table-block">
+          <div class="table-scroll">
+            <table class="req-table">
+              <caption>Technical details</caption>
+              <thead><tr><th scope="col">Item</th><th scope="col">What to provide</th><th scope="col">Example</th></tr></thead>
+              <tbody>
+            <tr><th scope="row">Technology stack</th><td>Language, framework and the versions you built with.</td><td>Node.js 22, Express 4, EJS</td></tr>
+            <tr><th scope="row">Database type</th><td>The database engine and version, or say none.</td><td>MongoDB 7, MySQL 8, or none</td></tr>
+            <tr><th scope="row">Docker configuration</th><td>Your Dockerfile, the port the app listens on, how it starts, and the names (never the values) of its environment variables.</td><td>Port 3000, variables PORT and DB_URL</td></tr>
+            <tr><th scope="row">GitLab repository URL</th><td>The official GitLab repository that holds the source code.</td><td>The link to your project on the institute GitLab</td></tr>
+            <tr><th scope="row">Authentication method</th><td>How visitors or administrators sign in, if they do.</td><td>Public site only; admin login with JWT and bcrypt-hashed passwords</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+<div class="table-block">
+          <div class="table-scroll">
+            <table class="req-table">
+              <caption>Security</caption>
+              <thead><tr><th scope="col">Item</th><th scope="col">What to provide</th><th scope="col">Example</th></tr></thead>
+              <tbody>
+            <tr><th scope="row">Security compliance review</th><td>A completed checklist for your stack. Open the checklist page and work through it.</td><td>Static, Node/React or CMS list finished</td></tr>
+            <tr><th scope="row">HTTPS</th><td>Your site must work over HTTPS. SSL is configured at go-live.</td><td>No hard-coded http:// links to your own pages</td></tr>
+            <tr><th scope="row">CAPTCHA on public forms</th><td>Any form open to the public is protected with a CAPTCHA.</td><td>Contact form and feedback form</td></tr>
+            <tr><th scope="row">Updated dependencies</th><td>Libraries, CMS core and plugins are on current, supported versions.</td><td>npm audit reviewed; CMS core and modules updated</td></tr>
+            <tr><th scope="row">Official compliance confirmation</th><td>A formal confirmation from your department or vendor that the security review is done.</td><td>Sent together with the request</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <section class="plain-section" id="template" aria-labelledby="template-title">
+          <h2 id="template-title">Submission template</h2>
+          <p>Fill in this template and send it with your code. It lists the details above as plain text. It is an example form, so check it against what WMC asks for before you send anything.</p>
+          <div class="actions" style="margin-top: var(--space-2)">
+            <a class="btn btn--primary" href="downloads/submission-template.zip">Download the template (zip)</a>
+          </div>
+          <div style="margin-top: var(--space-3)"><pre class="code"><code>HOSTING REQUEST: WEBSITE DETAILS
+(Fill this in and send it with your source code or GitLab link.)
+
+ABOUT THE WEBSITE
+Department or centre:
+Purpose of the website:
+URL details (paths, redirects):
+Production domain wanted:
+Point of contact (name, email, phone):
+
+TECHNICAL DETAILS
+Technology stack and versions:
+Database type and version (or none):
+Docker configuration (skip for static sites): port, start command, environment variable NAMES:
+GitLab repository URL:
+Authentication method:
+
+SECURITY
+Security checklist for my stack completed (yes/no):
+SSL/TLS: site works over HTTPS (yes/no), any special requirements:
+Public forms protected with CAPTCHA (yes/no/no forms):
+Dependencies and plugins updated (yes/no):
+Compliance confirmed by (name, role):
+</code></pre></div>
+        </section>
+
+      </div>
+    </div>
+
+    <nav class="next-step wrap" aria-label="Next step">
+      <a href="request.html"><span class="next-step__label">Next</span><span class="next-step__title">Start a hosting request</span></a>
+    </nav>
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Webservices Management Cell</h2>
+          <p>Website hosting and compliance for departments and centres at <a href="https://www.iitb.ac.in">IIT Bombay</a>.</p>
+          <p>IIT Bombay, Powai, Mumbai</p>
+        </section>
+        <section aria-labelledby="f-contact">
+          <h2 id="f-contact">Contact</h2>
+          <p>wmc [at] iitb [dot] ac [dot] in</p>
+          <p><a href="tel:+912221596769">(022) 2159 6769</a></p>
+          <p>Call during working hours</p>
+        </section>
+        <section aria-labelledby="f-start">
+          <h2 id="f-start">Get started</h2>
+          <ul>
+            <li><a href="request.html">Start a hosting request</a></li>
+            <li><a href="prepare.html#checklists">Open a checklist</a></li>
+            <li><a href="prepare.html#template">Download the template</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2026 Webservices Management Cell &middot; Last updated 15 October 2026</p>
+        <ul>
+          <li><a href="contact.html">Report a problem with this website</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

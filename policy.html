@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service policy | WMC, IIT Bombay</title>
+  <meta name="description" content="What the IIT Bombay Webservices Management Cell provides, what it does not, and what departments are responsible for.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1b3a6b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">WMC</span>
+        <span class="brand__text">
+          <span class="brand__name">Webservices Management Cell</span>
+          <span class="brand__sub">IIT Bombay</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workflow.html">Workflow</a></li>
+          <li><a href="prepare.html">Prepare</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="policy.html" aria-current="page">Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="request.html">Start a request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Service policy</h1>
+        <p>What WMC provides, what it leaves to departments and centres, and how problems are handled. This page summarises the policy in plain language; WMC's official wording applies if there is any difference.</p>
+      </div>
+    </section>
+
+    <div class="wrap workflow">
+      <nav class="stage-index" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a class="extra" href="#intro">1. Introduction</a></li>
+          <li><a class="extra" href="#scope">2. Scope of services</a></li>
+          <li><a class="extra" href="#responsibilities">3. Your responsibilities</a></li>
+          <li><a class="extra" href="#escalation">4. Escalating issues</a></li>
+          <li><a class="extra" href="#review">5. Policy review</a></li>
+        </ol>
+      </nav>
+
+      <div class="stages">
+        <section class="plain-section" id="intro" aria-labelledby="intro-title" style="padding-top: 0; border-top: 0">
+          <h2 id="intro-title">1. Introduction</h2>
+          <p>The Webservices Management Cell (WMC) hosts and maintains websites for the Institute's departments and centres. This policy sets out the services WMC offers and what departments and centres are responsible for on their side.</p>
+        </section>
+
+        <section class="plain-section" id="scope" aria-labelledby="scope-title">
+          <h2 id="scope-title">2. Scope of services</h2>
+          <div class="split" style="margin-top: var(--space-3)">
+            <section aria-labelledby="will-title">
+              <h3 id="will-title">WMC will</h3>
+              <ul>
+              <li><strong>Hosts your website</strong> <span>on secure server space</span></li>
+              <li><strong>Provides bandwidth</strong> <span>for smooth access</span></li>
+              <li><strong>Manages storage</strong> <span>with a standard 5 GB quota per site, files and database together; more can be considered case by case</span></li>
+              <li><strong>Monitors uptime</strong> <span>within available resources</span></li>
+              <li><strong>Takes regular backups</strong></li>
+              <li><strong>Allocates domains and subdomains</strong> <span>under Institute guidelines</span></li>
+              <li><strong>Gives limited technical support</strong> <span>for hosting, SSL certificates and deployment access</span></li>
+              <li><strong>Applies OS and server security patches</strong></li>
+              <li><strong>Deploys your site</strong> <span>preferably as a Dockerized app; CMS dumps on a best-effort basis; no terminal or backend access</span></li>
+              <li><strong>Provides an IIT Bombay Drupal theme</strong> <span>to start from</span></li>
+              </ul>
+            </section>
+            <section aria-labelledby="wont-title">
+              <h3 id="wont-title">WMC will not</h3>
+              <ul>
+              <li><strong>Design the site or create content</strong> <span>including structure and updates</span></li>
+              <li><strong>Build or maintain web applications</strong> <span>including forms and plugins</span></li>
+              <li><strong>Integrate custom features</strong> <span>such as payment gateways, third-party APIs or special integrations</span></li>
+              <li><strong>Troubleshoot department-specific issues</strong> <span>layout, content accuracy and internal workflows</span></li>
+              <li><strong>Host sites that need external-network logins</strong> <span>for adding or updating content</span></li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="plain-section" id="responsibilities" aria-labelledby="resp-title">
+          <h2 id="resp-title">3. Responsibilities of departments, academic units and centres</h2>
+          <ul class="ruled" style="margin-top: var(--space-3)">
+              <li><strong>Content ownership</strong> <span>design, updates and accuracy of content</span></li>
+              <li><strong>Submission format</strong> <span>Dockerized images preferred; CMS dumps on a best-effort basis</span></li>
+              <li><strong>Storage quota</strong> <span>stay within the approved limit unless more is officially approved</span></li>
+              <li><strong>A web coordinator</strong> <span>named to talk to WMC</span></li>
+              <li><strong>Compliance</strong> <span>hosted content follows Institute policies and applicable legal guidelines</span></li>
+              <li><strong>Application-level security</strong> <span>including resolving every reported vulnerability before launch approval</span></li>
+          </ul>
+        </section>
+
+        <section class="plain-section" id="escalation" aria-labelledby="esc-title">
+          <h2 id="esc-title">4. Escalating issues</h2>
+          <p>Report technical hosting problems to WMC through the official support channel. Design and content problems are handled inside the department or centre.</p>
+          <p style="margin-top: var(--space-2)">Please email WMC before visiting in person and wait for a reply. The team is often in the middle of other work, and unannounced visits interrupt it.</p>
+        </section>
+
+        <section class="plain-section" id="review" aria-labelledby="review-title">
+          <h2 id="review-title">5. Policy review</h2>
+          <p>WMC reviews this policy from time to time and updates it as the Institute's operational and security needs change.</p>
+        </section>
+      </div>
+    </div>
+
+  
+    <nav class="next-step wrap" aria-label="Next step">
+      <a href="workflow.html"><span class="next-step__label">Next</span><span class="next-step__title">See how a request moves</span></a>
+    </nav>
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Webservices Management Cell</h2>
+          <p>Website hosting and compliance for departments and centres at <a href="https://www.iitb.ac.in">IIT Bombay</a>.</p>
+          <p>IIT Bombay, Powai, Mumbai</p>
+        </section>
+        <section aria-labelledby="f-contact">
+          <h2 id="f-contact">Contact</h2>
+          <p>wmc [at] iitb [dot] ac [dot] in</p>
+          <p><a href="tel:+912221596769">(022) 2159 6769</a></p>
+          <p>Call during working hours</p>
+        </section>
+        <section aria-labelledby="f-start">
+          <h2 id="f-start">Get started</h2>
+          <ul>
+            <li><a href="request.html">Start a hosting request</a></li>
+            <li><a href="prepare.html#checklists">Open a checklist</a></li>
+            <li><a href="prepare.html#template">Download the template</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2026 Webservices Management Cell &middot; Last updated 15 October 2026</p>
+        <ul>
+          <li><a href="contact.html">Report a problem with this website</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hosting workflow | WMC, IIT Bombay</title>
+  <meta name="description" content="The five stages of a website hosting request at IIT Bombay, who is responsible at each stage, and what to hand over.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1b3a6b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">WMC</span>
+        <span class="brand__text">
+          <span class="brand__name">Webservices Management Cell</span>
+          <span class="brand__sub">IIT Bombay</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workflow.html" aria-current="page">Workflow</a></li>
+          <li><a href="prepare.html">Prepare</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="request.html">Start a request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <h1>How a hosting request moves from your desk to a live site</h1>
+        <p>There are five stages. You own the first stage and the final hand-over, the cybersecurity team runs the scan, and the fix-and-retest cycle is shared. Knowing what each stage asks for is the easiest way to avoid delays.</p>
+      </div>
+    </section>
+
+    <div class="wrap workflow">
+
+      <nav class="stage-index" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#comply">Review security yourself</a></li>
+          <li><a href="#scan">Vulnerability scan</a></li>
+          <li><a href="#fix">Fix and retest</a></li>
+          <li><a href="#submit">Send code to WMC</a></li>
+          <li><a href="#live">Go live</a></li>
+          <li><a class="extra" href="#after">After launch</a></li>
+          <li><a class="extra" href="#updates">Updating your site</a></li>
+          <li><a class="extra" href="#timing">How long it takes</a></li>
+        </ol>
+      </nav>
+
+      <div class="stages">
+
+        <article class="stage" id="comply" aria-labelledby="comply-title">
+          <div class="stage__head">
+            <span class="stage__num" aria-hidden="true">1</span>
+            <h2 id="comply-title">Review security yourself</h2>
+          </div>
+          <p class="stage__lede">Check your own work against the checklist before anyone else scans it.</p>
+          <dl class="stage__facts">
+            <div>
+              <dt>Who acts</dt>
+              <dd>Your team.</dd>
+            </div>
+            <div>
+              <dt>What to do</dt>
+              <dd>
+                <ul>
+                  <li>Open the checklist for your stack and fix whatever applies</li>
+                  <li>Enable SSL/TLS, add CAPTCHA to public forms and update your dependencies</li>
+                  <li>Formally confirm that the review is done</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>What you get</dt>
+              <dd>A cleaner first scan. Most findings that would cost you a retest cycle are cheaper to fix here.</dd>
+            </div>
+            <div>
+              <dt>Good to know</dt>
+              <dd>The individual checklist items are guidance, but this review and the confirmation are a required step. The Computer Centre may still raise extra points based on how your application is built.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="stage" id="scan" aria-labelledby="scan-title">
+          <div class="stage__head">
+            <span class="stage__num" aria-hidden="true">2</span>
+            <h2 id="scan-title">Vulnerability scan</h2>
+          </div>
+          <p class="stage__lede">The cybersecurity team tests your site and writes up what it finds.</p>
+          <dl class="stage__facts">
+            <div>
+              <dt>Who acts</dt>
+              <dd>The cybersecurity team.</dd>
+            </div>
+            <div>
+              <dt>What happens</dt>
+              <dd>Both automated tools and manual testing are used on the submitted application.</dd>
+            </div>
+            <div>
+              <dt>What you get</dt>
+              <dd>A report of vulnerabilities, shared with your team so you can fix them.</dd>
+            </div>
+            <div>
+              <dt>How to submit</dt>
+              <dd>Follow the instructions WMC gives you for submitting your site for the scan.</dd>
+            </div>
+            <div>
+              <dt>Your part</dt>
+              <dd>Keep your coordinator reachable. A report that sits unread is an easy way for a request to stall.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="stage" id="fix" aria-labelledby="fix-title">
+          <div class="stage__head">
+            <span class="stage__num" aria-hidden="true">3</span>
+            <h2 id="fix-title">Fix and retest</h2>
+          </div>
+          <p class="stage__lede">Every reported issue has to be closed before the site can launch.</p>
+          <dl class="stage__facts">
+            <div>
+              <dt>Who acts</dt>
+              <dd>Your developers fix the issues. The cybersecurity team then tests again.</dd>
+            </div>
+            <div>
+              <dt>What to do</dt>
+              <dd>Resolve each finding in the report and resubmit the updated code.</dd>
+            </div>
+            <div>
+              <dt>What you get</dt>
+              <dd>Final approval once the retest comes back clean.</dd>
+            </div>
+          </dl>
+          <div class="loop">
+            <h3>If the retest finds something new</h3>
+            <p>Stages 2 and 3 repeat until the site is clean. This is the part of the process that varies most, which is why stage 1 is worth doing carefully.</p>
+          </div>
+        </article>
+        <article class="stage" id="submit" aria-labelledby="submit-title">
+          <div class="stage__head">
+            <span class="stage__num" aria-hidden="true">4</span>
+            <h2 id="submit-title">Send your approved code to WMC</h2>
+          </div>
+          <p class="stage__lede">Once the scan is clean, send WMC the approved code and the details it needs to deploy your site.</p>
+          <dl class="stage__facts">
+            <div>
+              <dt>Who acts</dt>
+              <dd>Your department, centre or the vendor building the site.</dd>
+            </div>
+            <div>
+              <dt>What to send</dt>
+              <dd>
+                <ul>
+                  <li>A Dockerized application, or a GitLab repository link if the site is static HTML</li>
+                  <li>Your technology stack, database type and how users sign in</li>
+                  <li>The production domain you want, and what the site is for</li>
+                  <li>The name of your web coordinator</li>
+                  <li>Your formal confirmation that the security review is done</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>What you get</dt>
+              <dd>WMC has what it needs to deploy your site.</dd>
+            </div>
+            <div>
+              <dt>Good to know</dt>
+              <dd>Cannot use Docker? CMS dumps for Drupal and WordPress are accepted on a best-effort basis, subject to compatibility. Ask WMC before you start building.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="stage stage--final" id="live" aria-labelledby="live-title">
+          <div class="stage__head">
+            <span class="stage__num" aria-hidden="true">5</span>
+            <h2 id="live-title">Go live</h2>
+          </div>
+          <p class="stage__lede">With security clearance and deployment approval in place, the site goes public.</p>
+          <dl class="stage__facts">
+            <div>
+              <dt>What happens</dt>
+              <dd>Your domain is mapped through DNS, SSL is configured and the site opens to the public.</dd>
+            </div>
+            <div>
+              <dt>What you get</dt>
+              <dd>A live site on the domain you requested, on a domain or subdomain allocated under Institute guidelines.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <section class="plain-section" id="after" aria-labelledby="after-title">
+          <h2 id="after-title">After launch</h2>
+          <p>Going live does not end the process; it changes who looks after what. WMC keeps the servers patched, backed up and monitored. Your team keeps the content, design and application up to date.</p>
+          <p>If something breaks on the hosting side, report it to WMC through the official support channel. Layout, wording and other content problems belong to your own department or developers.</p>
+        </section>
+
+        <section class="plain-section" id="updates" aria-labelledby="updates-title">
+          <h2 id="updates-title">Keeping your site up to date</h2>
+          <p>After launch, the site is yours to maintain. Your developer or department updates the content, the design and the software, and plans regular updates so libraries, CMS core and plugins stay current. WMC patches the servers, not your application.</p>
+          <p>WMC does not give anyone terminal or backend access, so updates are not made by logging into the server. How an update reaches the live site depends on what you host:</p>
+          <div class="table-scroll" style="margin-top: var(--space-3)">
+            <table class="req-table" style="min-width: 0">
+              <thead><tr><th scope="col">What you host</th><th scope="col">How updates are made</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Static HTML site</th><td>Changes are made in your official GitLab repository, which WMC syncs to the server.</td></tr>
+                <tr><th scope="row">Dockerized app</th><td>The server runs the image you submitted, so an update means a new version of that image. Ask WMC how to submit it.</td></tr>
+                <tr><th scope="row">Drupal or WordPress</th><td>Content is updated through the CMS's own admin login. WMC does not host sites that need logins from outside the Institute network for content updates.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top: var(--space-3)">For a big change, such as a new feature or a different technology stack, check with WMC whether it needs another security review before you go ahead.</p>
+        </section>
+
+        <section class="plain-section" id="timing" aria-labelledby="timing-title">
+          <h2 id="timing-title">How long it takes</h2>
+          <p>Expect around 7 to 10 working days on average. The actual time depends on three things: how complex the application is, how many vulnerabilities are still open, and how quickly approvals come through.</p>
+          <p>Two of those are largely in your hands. Arrive with a clean checklist and respond to reports quickly.</p>
+          <div class="actions" style="margin-top: var(--space-3)">
+            <a class="btn btn--primary" href="request.html">Start a hosting request</a>
+            <a class="btn btn--ghost" href="prepare.html#checklists">Open the checklists</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  
+    <nav class="next-step wrap" aria-label="Next step">
+      <a href="prepare.html"><span class="next-step__label">Next</span><span class="next-step__title">Prepare your submission</span></a>
+    </nav>
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Webservices Management Cell</h2>
+          <p>Website hosting and compliance for departments and centres at <a href="https://www.iitb.ac.in">IIT Bombay</a>.</p>
+          <p>IIT Bombay, Powai, Mumbai</p>
+        </section>
+        <section aria-labelledby="f-contact">
+          <h2 id="f-contact">Contact</h2>
+          <p>wmc [at] iitb [dot] ac [dot] in</p>
+          <p><a href="tel:+912221596769">(022) 2159 6769</a></p>
+          <p>Call during working hours</p>
+        </section>
+        <section aria-labelledby="f-start">
+          <h2 id="f-start">Get started</h2>
+          <ul>
+            <li><a href="request.html">Start a hosting request</a></li>
+            <li><a href="prepare.html#checklists">Open a checklist</a></li>
+            <li><a href="prepare.html#template">Download the template</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2026 Webservices Management Cell &middot; Last updated 15 October 2026</p>
+        <ul>
+          <li><a href="contact.html">Report a problem with this website</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

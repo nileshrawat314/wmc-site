@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WMC, IIT Bombay | Website hosting</title>
+  <meta name="description" content="Webservices Management Cell (WMC), IIT Bombay: how departments and centres host a website, what to prepare, how the security review works and who to contact.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1b3a6b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">WMC</span>
+        <span class="brand__text">
+          <span class="brand__name">Webservices Management Cell</span>
+          <span class="brand__sub">IIT Bombay</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="workflow.html">Workflow</a></li>
+          <li><a href="prepare.html">Prepare</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="request.html">Start a request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero__copy">
+          <h1>Host your department website on IIT Bombay servers</h1>
+          <p>Pass a security review, send us your approved code, and we connect your domain. Most requests take 7 to 10 working days.</p>
+          <div class="notice" role="note">
+            <h2 class="notice__title">Read this first</h2>
+            <ul>
+              <li><strong>WMC hosts your site.</strong> You update it yourself.</li>
+              <li><strong>Finish your security checklist</strong> before you send your code.</li>
+              <li><strong>Email before visiting.</strong> Please don't drop in unannounced.</li>
+              <li><strong>Plan for about 7 to 10 working days.</strong></li>
+            </ul>
+          </div>
+          <div class="actions">
+            <a class="btn btn--primary" href="request.html">Start a hosting request</a>
+            <a class="btn btn--ghost" href="prepare.html#checklists">See what to prepare</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The five stages, as a route -->
+    <section class="route-block" aria-labelledby="route-title">
+      <div class="wrap">
+        <div class="route-block__title">
+          <h2 id="route-title">From code to live site</h2>
+          <p>7 to 10 working days end to end. Pending vulnerabilities can extend this.</p>
+        </div>
+        <ol class="route">
+          <li>
+            <span class="route__step">You</span>
+            <h3><a href="workflow.html#comply">Check security</a></h3>
+            <p>Work through the checklist for your stack and confirm compliance before scanning.</p>
+          </li>
+          <li>
+            <span class="route__step">Cybersecurity team</span>
+            <h3><a href="workflow.html#scan">Vulnerability scan</a></h3>
+            <p>Manual and automated testing. You receive a report with findings.</p>
+          </li>
+          <li>
+            <span class="route__step">You, then cybersecurity team</span>
+            <h3><a href="workflow.html#fix">Fix and revalidate</a></h3>
+            <p>Resolve every finding. The team re-tests before final approval.</p>
+          </li>
+          <li>
+            <span class="route__step">You</span>
+            <h3><a href="workflow.html#submit">Send code to WMC</a></h3>
+            <p>Send a Dockerized app or a GitLab link for a static site, with deployment details and a point of contact.</p>
+          </li>
+          <li>
+            <span class="route__step">After clearance</span>
+            <h3><a href="workflow.html#live">Go live</a></h3>
+            <p>DNS and SSL are switched on and the site is public.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Picker -->
+    <section class="band band--surface" aria-labelledby="picker-title">
+      <div class="wrap">
+        <div class="band__head">
+          <h2 id="picker-title">What are you hosting?</h2>
+          <p>Pick your stack to see the exact checklist and what to hand over.</p>
+        </div>
+        <div class="picker">
+          <a href="prepare.html#static">
+            <h3><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Static HTML site</h3>
+            <p>Plain HTML, CSS and JavaScript, kept in an official GitLab repository.</p>
+            <span class="picker__route">GitLab sync</span>
+          </a>
+          <a href="prepare.html#node">
+            <h3><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>Node.js or React app</h3>
+            <p>Packaged with a Dockerfile and deployment instructions, with secrets kept out of the code.</p>
+            <span class="picker__route">Docker preferred</span>
+          </a>
+          <a href="prepare.html#cms">
+            <h3><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Drupal or WordPress</h3>
+            <p>Core, plugins and modules up to date. CMS dumps are accepted on a best-effort basis.</p>
+            <span class="picker__route">Best-effort dump</span>
+          </a>
+        </div>
+        <p class="picker-note">Not sure which fits? Write to WMC before you build.</p>
+      </div>
+    </section>
+
+    <!-- Who does what -->
+    <section class="band" aria-labelledby="split-title">
+      <div class="wrap">
+        <div class="band__head">
+          <h2 id="split-title">Who looks after what</h2>
+          <p>WMC runs the servers. Your team owns the website itself.</p>
+        </div>
+
+        <div class="split">
+          <section aria-labelledby="wmc-does">
+            <h3 id="wmc-does"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>WMC takes care of</h3>
+            <ul>
+              <li><strong>Server space and bandwidth</strong> <span>for your site</span></li>
+              <li><strong>5 GB disk quota</strong> <span>per site, files and database together</span></li>
+              <li><strong>Backups and uptime monitoring</strong></li>
+              <li><strong>OS and server security patches</strong></li>
+              <li><strong>Domains and subdomains</strong> <span>as per Institute guidelines</span></li>
+              <li><strong>Limited hosting support</strong> <span>for SSL and deployment access</span></li>
+              <li><strong>An IIT Bombay Drupal theme</strong> <span>to start from</span></li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="you-do">
+            <h3 id="you-do"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Your team takes care of</h3>
+            <ul>
+              <li><strong>Design, content and updates</strong></li>
+              <li><strong>Building and maintaining the application</strong> <span>including forms and plugins</span></li>
+              <li><strong>Application-level security</strong></li>
+              <li><strong>Fixing every reported vulnerability</strong> <span>before launch approval</span></li>
+              <li><strong>Custom integrations</strong> <span>such as payment gateways and third-party APIs</span></li>
+              <li><strong>A named web coordinator</strong> <span>who talks to WMC</span></li>
+              <li><strong>Staying inside the quota</strong> <span>unless more is approved</span></li>
+            </ul>
+          </section>
+        </div>
+
+        <dl class="facts">
+          <div>
+            <dt>No terminal access</dt>
+            <dd>Deployment is handled by WMC, not through backend login.</dd>
+          </div>
+          <div>
+            <dt>No external logins</dt>
+            <dd>Sites that need login from outside the campus network for content updates are not hosted.</dd>
+          </div>
+          <div>
+            <dt>Extra checks can come up</dt>
+            <dd>The Computer Centre may raise more requirements after seeing your architecture.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="band band--surface" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <div class="band__head">
+          <h2 id="contact-title">Questions before you submit?</h2>
+          <p>Write to WMC for deployment approval, compliance questions or hosting requests. Call during working hours for help with deployment.</p>
+          <div class="actions">
+            <a class="btn btn--ghost" href="contact.html">Contact details</a>
+          </div>
+        </div>
+        <dl class="contact__list">
+          <div>
+            <dt>Email</dt>
+            <dd>wmc [at] iitb [dot] ac [dot] in</dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+912221596769">(022) 2159 6769</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <section aria-labelledby="f-about">
+          <h2 id="f-about">Webservices Management Cell</h2>
+          <p>Website hosting and compliance for departments and centres at <a href="https://www.iitb.ac.in">IIT Bombay</a>.</p>
+          <p>IIT Bombay, Powai, Mumbai</p>
+        </section>
+        <section aria-labelledby="f-contact">
+          <h2 id="f-contact">Contact</h2>
+          <p>wmc [at] iitb [dot] ac [dot] in</p>
+          <p><a href="tel:+912221596769">(022) 2159 6769</a></p>
+          <p>Call during working hours</p>
+        </section>
+        <section aria-labelledby="f-start">
+          <h2 id="f-start">Get started</h2>
+          <ul>
+            <li><a href="request.html">Start a hosting request</a></li>
+            <li><a href="prepare.html#checklists">Open a checklist</a></li>
+            <li><a href="prepare.html#template">Download the template</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2026 Webservices Management Cell &middot; Last updated 15 October 2026</p>
+        <ul>
+          <li><a href="contact.html">Report a problem with this website</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
