@@ -1,0 +1,23 @@
+HOSTING REQUEST: WEBSITE DETAILS
+(Fill this in and send it with your source code or GitLab link.)
+
+ABOUT THE WEBSITE
+Department or centre:
+Purpose of the website:
+URL details (paths, redirects):
+Production domain wanted:
+Point of contact (name, email, phone):
+
+TECHNICAL DETAILS
+Technology stack and versions:
+Database type and version (or none):
+Docker configuration (skip for static sites): port, start command, environment variable NAMES:
+GitLab repository URL:
+Authentication method:
+
+SECURITY
+Security checklist for my stack completed (yes/no):
+SSL/TLS: site works over HTTPS (yes/no), any special requirements:
+Public forms protected with CAPTCHA (yes/no/no forms):
+Dependencies and plugins updated (yes/no):
+Compliance confirmed by (name, role):
